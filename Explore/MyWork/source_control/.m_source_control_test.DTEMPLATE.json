@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "feE3pp3ALaxfYPbjnnlnEz",
+    "name" : "m_source_control_test",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CL0N17000000000051"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-23T23:21:46.031Z",
+  "objectRefs" : [ ]
+}
