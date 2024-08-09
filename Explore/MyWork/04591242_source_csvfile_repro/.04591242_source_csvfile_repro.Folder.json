@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "0jLLdH9Di6Xiyo9yUzP4oI",
+    "name" : "04591242_source_csvfile_repro",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-08-09T18:27:43.249Z",
+  "objectRefs" : [ ]
+}
