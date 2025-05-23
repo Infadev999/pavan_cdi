@@ -1,0 +1,70 @@
+name: IICS CI/CD Deployment
+
+on:
+  push:
+    branches:
+      - dev
+      - git_pavan
+
+jobs:
+  auth_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Authenticate with Source IICS
+      id: source_login
+      run: |
+        response=$(curl -X POST \
+          https://dm-us.informaticacloud.com/ma/api/v2/user/login \
+          -H "Content-Type: application/json" \
+          -d '{
+                "username": "${{ secrets.IICS_USERNAME }}",
+                "password": "${{ secrets.IICS_PASSWORD }}",
+                "accountName": "your_source_account_name"
+              }')
+        echo "::set-output name=session_token::$(echo $response | jq -r '.icSessionId')"
+
+    - name: Authenticate with Target IICS
+      id: target_login
+      run: |
+        response=$(curl -X POST \
+          https://dm-us.informaticacloud.com/ma/api/v2/user/login \
+          -H "Content-Type: application/json" \
+          -d '{
+                "username": "${{ secrets.UAT_IICS_USERNAME }}",
+                "password": "${{ secrets.UAT_IICS_PASSWORD }}",
+                "accountName": "your_target_account_name"
+              }')
+        echo "::set-output name=session_token::$(echo $response | jq -r '.icSessionId')"
+
+    - name: Deploy from Source to Target
+      run: |
+        curl -X POST \
+          https://dm-us.informaticacloud.com/ma/api/v2/project/deploy \
+          -H "Content-Type: application/json" \
+          -H "icSessionId: ${{ steps.source_login.outputs.session_token }}" \
+          -H "targetSessionId: ${{ steps.target_login.outputs.session_token }}" \
+          -d '{
+                "sourceProject": "your_source_project_id",
+                "targetProject": "your_target_project_id"
+                // Add other necessary deployment parameters here
+              }'
+
+    - name: Logout from Source IICS
+      run: |
+        curl -X POST \
+          https://dm-us.informaticacloud.com/ma/api/v2/user/logout \
+          -H "Content-Type: application/json" \
+          -H "icSessionId: ${{ steps.source_login.outputs.session_token }}"
+
+    - name: Logout from Target IICS
+      run: |
+        curl -X POST \
+          https://dm-us.informaticacloud.com/ma/api/v2/user/logout \
+          -H "Content-Type: application/json" \
+          -H "icSessionId: ${{ steps.target_login.outputs.session_token }}"
