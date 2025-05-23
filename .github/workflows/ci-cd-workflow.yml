@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - dev
-      - pavan_git
+      - git_pavan
 
 jobs:
   auth_and_deploy:
