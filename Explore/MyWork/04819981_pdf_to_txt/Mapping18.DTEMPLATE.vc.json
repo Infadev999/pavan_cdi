@@ -1,0 +1,777 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping18",
+    "links" : [
+      {
+        "link" : "Source -> StructureParser",
+        "groupLink" : "DefaultGroup -> Input_Group"
+      },
+      {
+        "link" : "StructureParser -> Target",
+        "groupLink" : "record -> DefaultGroup"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-04-29T17:53:16.012Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "filename"
+            },
+            "name" : "filename",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@2LZLb8FulVSfKbY1nP6nqJ",
+          "connectionName" : "PK_FF_localcluster",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "pdf_file.txt",
+            "label" : "pdf_file.txt",
+            "objectName" : "pdf_file.txt",
+            "path" : "pdf_file.txt",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "filename",
+                "fieldType" : "CONNECTOR",
+                "label" : "filename",
+                "nativeName" : "filename",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "pdf_file.txt"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-04-29T17:53:16.015Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@2LZLb8FulVSfKbY1nP6nqJ",
+          "connectionName" : "PK_FF_localcluster",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "tgtfile1.out",
+            "label" : "tgtfile1.out",
+            "path" : "tgtfile1.out",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-04-29T17:53:39.693Z",
+        "name" : "StructureParser",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Input_Group",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "Unidentified",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "record",
+            "output" : "true"
+          }
+        ],
+        "fieldMappingMode" : "MANUAL",
+        "inputType" : "FILE",
+        "isdLastModify" : "2025-04-29T18:09:47Z",
+        "isdModelId" : "@9RapzMpdBqthwG0zxoWw6R",
+        "isdModelName" : "ISM_pdf",
+        "modelString" : "ATLMDL_v2.1_ML Tue Apr 29 18:09:46 UTC 2025|eJzVWl1v4jgUfZ9fEeW5akuAdjpvMy10WHVpRdmVRsMIubFTrAk2azttmW7/+9r5gsQOIdWSSaR+kPjc6+NjO773htcPlmWzJYXItz9Zr/JKXnOX4ZVIr9UdAQRaIiIuF9iHDBHZ+D1utFLYHtA8vNjkx1EhbLpeIQmx76eT0fja1oArhlzMMVV+bKff1xEELEMP1/gJkflYXs2n6EXMv9AXHez6gPNxbPEHp+Q+IaJjPfyCoMJ19DYR0xayJ701IPifAI1C467ejPywx/EO4hmTt6Omaj4ES+yv6xJ9W9ZeqaxGbi3R9TOU3XE+7zRqKRsI5zQ38G6J4l9pwNGcsJqX8VmppDqxliiarAWnZknP916lTus0vaNcuPKAr/OxQH/KAe5U/GOp4jrvlgh+icW65vV7UapmllRblKQBEWw9v6TLB1qfmp3Tcjk1Zi2R9BoRiNj8BvPmPAs6BvN8vJuj3RK1vyL8uBDzIWVLIASC8yFGPqxpFTvlcYKZXkvEvWL4CZNHuShcRGS8c7lA7s/mLOryJK54AC2ZgRtAHgPwiGTs3jDxy1M9I/fm6L6P6k5dqkcPCAUg9N814sVz80Cpj0DZ7JQnhcYxNmd29tsV3abtivLM0ci9bbr3mqZ7eXpp5N423ftN0708yTRyb4nuQ/BEA4aFDByoLz81LKgvz0mLB5Cdga2rjLCpEozS7ED2HXDRYG3MJ8ilDE6UZ715e6DZMDs/Rha62QwoGUw6EFswQLgnT1jEwrLH1VAdt6nT7FCmG7A+IlsevYwgdgUEUGCXLo8x8cLDG7vgGAgfEPnpeIERA8xdrI/voDelSp+Nk8wkbm7nqzMxzbA53iM2RwwDH/9CcMpQCJsFp6ddd0whstRkhZdwZkPqBsrbLAKgGVH2W2BMVoGIpiCxESxAMzvjJhJX3pR/EUMp1AM+V9h0043SJifbZa7bB8Cxq3ZoAo92qXSF+d/AD9AOMoZXMhKRbueUQL9vZtaVt8VW16q2PrNPDsTW9KajEt3e4bjpbwQqMevXKqRWa6/E9ezwKjrvY3Z+OGZaZbcSsY/56VVn0eHIZgqnlYheHJBUvvxYiVjn9HDMcoW6arw69U6tufxVjbJzOHqF5aFqDLVz5bCimuoq1Qj3/gfCX25vbwafx9UYO7sZF/HNnzdxDSS+G62upC2qn9Sgfve96p/9puXSey/h899EuP9ewjUfYIVZVjXWF3uwjhifKMr67b+IzGPwI0FQ5SeKhJYWyNQDyl6xhyNQUayedaXcjCTfna4UQHdX5DLUNOOPCyafxYZZKnIRJS+jK27IWKSsRdN9Yh6bQWWzngnQMBUqVwszNRvmv/AHlis/zNdeVRcFucwn2SCzLCYs9cuQJdR/GVofRUbmlEJZWUggi4nI1BLCSm1Mob6yUNgEzpD6sVSv0ou6m5obgu+Q5bN0Ci0Pcs96ZlpnTg7OBBPQs6IuWdhZPEq0MTYErSHRFJALFGO1nhmPHIVqZVwLyZDLfjce9Kgu8iJVViYpUAuyFOxPdeQkuhRENgrX6Z/CmI5y6llSpdRwR8yhbG+9DdR80BeinDzqmzoH86juXr56e6H6u1A7nooKOkFSrRl5s5PKxoIyMcQ+Suofg6vR1Lqld9BTIg9ewh10vIJeYgEgxEI+WYF/H7bxrbrgVmPiM9MsFxEDcRUn/Q7udDIYzKff7gaqe0kH/6JEAD+uwKi9/eHtP+II75o=",
+        "outputType" : "Relational",
+        "inputGroups" : [
+          {
+            "name" : "Input_Group",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "FilePath",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4096,
+                "scale" : 0,
+                "uniqueName" : "FilePath"
+              },
+              {
+                "name" : "Data",
+                "platformType" : {
+                  "name" : "binary"
+                },
+                "precision" : 65536,
+                "scale" : 0,
+                "uniqueName" : "Data"
+              }
+            ]
+          }
+        ],
+        "outputGroups" : [
+          {
+            "name" : "Unidentified",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "unidentified",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4096,
+                "scale" : 0,
+                "uniqueName" : "00"
+              }
+            ]
+          },
+          {
+            "name" : "record",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "Given_Name_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "3"
+              },
+              {
+                "name" : "Family_Name_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "4"
+              },
+              {
+                "name" : "Address_1_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "5"
+              },
+              {
+                "name" : "House_nr_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "6"
+              },
+              {
+                "name" : "Address_2_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "7"
+              },
+              {
+                "name" : "Postcode_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "8"
+              },
+              {
+                "name" : "City_Text_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "9"
+              },
+              {
+                "name" : "Country_Combo_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "10"
+              },
+              {
+                "name" : "Gender_List_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "11"
+              },
+              {
+                "name" : "Height_Formatted_Field",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "12"
+              },
+              {
+                "name" : "Driving_License_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "13"
+              },
+              {
+                "name" : "Language_1_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "14"
+              },
+              {
+                "name" : "Language_2_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 5,
+                "scale" : 0,
+                "uniqueName" : "15"
+              },
+              {
+                "name" : "Language_3_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "16"
+              },
+              {
+                "name" : "Language_4_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "17"
+              },
+              {
+                "name" : "Language_5_Check_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "18"
+              },
+              {
+                "name" : "Favourite_Colour_List_Box",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "19"
+              }
+            ]
+          }
+        ],
+        "dataAdapter" : {
+          "inputFields" : [
+            {
+              "name" : "FilePath",
+              "fieldType" : "CONNECTOR",
+              "label" : "FilePath",
+              "nativeName" : "FilePath",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4096,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Data",
+              "fieldType" : "CONNECTOR",
+              "label" : "Data",
+              "nativeName" : "Data",
+              "nativeType" : "binary",
+              "original" : "false",
+              "precision" : 65536,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            }
+          ],
+          "outputFields" : [
+            {
+              "name" : "unidentified",
+              "fieldType" : "CONNECTOR",
+              "label" : "unidentified",
+              "nativeName" : "00",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4096,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Given_Name_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Given_Name_Text_Box_output_field",
+              "nativeName" : "3",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Family_Name_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Family_Name_Text_Box_output_field",
+              "nativeName" : "4",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Address_1_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Address_1_Text_Box_output_field",
+              "nativeName" : "5",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "House_nr_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "House_nr_Text_Box_output_field",
+              "nativeName" : "6",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Address_2_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Address_2_Text_Box_output_field",
+              "nativeName" : "7",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Postcode_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Postcode_Text_Box_output_field",
+              "nativeName" : "8",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "City_Text_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "City_Text_Box_output_field",
+              "nativeName" : "9",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Country_Combo_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Country_Combo_Box_output_field",
+              "nativeName" : "10",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Gender_List_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Gender_List_Box_output_field",
+              "nativeName" : "11",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Height_Formatted_Field",
+              "fieldType" : "CONNECTOR",
+              "label" : "Height_Formatted_Field_output_field",
+              "nativeName" : "12",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Driving_License_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Driving_License_Check_Box_output_field",
+              "nativeName" : "13",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Language_1_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Language_1_Check_Box_output_field",
+              "nativeName" : "14",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Language_2_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Language_2_Check_Box_output_field",
+              "nativeName" : "15",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 5,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Language_3_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Language_3_Check_Box_output_field",
+              "nativeName" : "16",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Language_4_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Language_4_Check_Box_output_field",
+              "nativeName" : "17",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Language_5_Check_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Language_5_Check_Box_output_field",
+              "nativeName" : "18",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            },
+            {
+              "name" : "Favourite_Colour_List_Box",
+              "fieldType" : "CONNECTOR",
+              "label" : "Favourite_Colour_List_Box_output_field",
+              "nativeName" : "19",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "ISM_pdf"
+                }
+              ]
+            }
+          ]
+        },
+        "fieldMapping" : {
+          "fields" : [
+            {
+              "adapterField" : {
+                "name" : "FilePath"
+              },
+              "name" : "filename",
+              "precision" : 0,
+              "scale" : 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-05-23 15:09:10 EDT"
+}
