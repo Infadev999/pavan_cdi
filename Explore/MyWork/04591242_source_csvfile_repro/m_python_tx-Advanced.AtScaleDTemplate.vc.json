@@ -1,0 +1,581 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "AT_SCALE_MAPPING",
+    "name" : "m_python_tx-Advanced",
+    "links" : [
+      {
+        "link" : "Python -> Target"
+      },
+      {
+        "link" : "Source -> Python"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-12-12T01:48:14.008Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "DepartmentName"
+            },
+            "name" : "DepartmentName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DepartmentID"
+            },
+            "name" : "DepartmentID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EmployeeName"
+            },
+            "name" : "EmployeeName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SalaryIndex"
+            },
+            "name" : "SalaryIndex",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EmployeeSince"
+            },
+            "name" : "EmployeeSince",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@3voULJyd4NOenOLD0ILYUj",
+          "connectionName" : "cnx_dummy",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "employee.csv",
+            "label" : "employee.csv",
+            "objectName" : "employee.csv",
+            "path" : "employee.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "DepartmentName",
+                "fieldType" : "CONNECTOR",
+                "label" : "DepartmentName",
+                "nativeName" : "DepartmentName",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DepartmentID",
+                "fieldType" : "CONNECTOR",
+                "label" : "DepartmentID",
+                "nativeName" : "DepartmentID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EmployeeName",
+                "fieldType" : "CONNECTOR",
+                "label" : "EmployeeName",
+                "nativeName" : "EmployeeName",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SalaryIndex",
+                "fieldType" : "CONNECTOR",
+                "label" : "SalaryIndex",
+                "nativeName" : "SalaryIndex",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EmployeeSince",
+                "fieldType" : "CONNECTOR",
+                "label" : "EmployeeSince",
+                "nativeName" : "EmployeeSince",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "employee.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-12-12T01:48:14.008Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "DepartmentName"
+            },
+            "name" : "DepartmentName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DepartmentID"
+            },
+            "name" : "DepartmentID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EmployeeName"
+            },
+            "name" : "EmployeeName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SalaryIndex"
+            },
+            "name" : "SalaryIndex",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EmployeeSince"
+            },
+            "name" : "EmployeeSince",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@3voULJyd4NOenOLD0ILYUj",
+          "connectionName" : "cnx_dummy",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "tgt_employee.csv",
+            "label" : "tgt_employee.csv",
+            "objectName" : "tgt_employee.csv",
+            "path" : "tgt_employee.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "DepartmentName",
+                "fieldType" : "CONNECTOR",
+                "label" : "DepartmentName",
+                "nativeName" : "DepartmentName",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tgt_employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DepartmentID",
+                "fieldType" : "CONNECTOR",
+                "label" : "DepartmentID",
+                "nativeName" : "DepartmentID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tgt_employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EmployeeName",
+                "fieldType" : "CONNECTOR",
+                "label" : "EmployeeName",
+                "nativeName" : "EmployeeName",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tgt_employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SalaryIndex",
+                "fieldType" : "CONNECTOR",
+                "label" : "SalaryIndex",
+                "nativeName" : "SalaryIndex",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tgt_employee.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EmployeeSince",
+                "fieldType" : "CONNECTOR",
+                "label" : "EmployeeSince",
+                "nativeName" : "EmployeeSince",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tgt_employee.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "DepartmentName_out",
+              "toField" : {
+                "name" : "DepartmentName"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "DepartmentID_out",
+              "toField" : {
+                "name" : "DepartmentID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EmployeeName_out",
+              "toField" : {
+                "name" : "EmployeeName"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "SalaryIndex_out",
+              "toField" : {
+                "name" : "SalaryIndex"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EmployeeSince_out",
+              "toField" : {
+                "name" : "EmployeeSince"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2023-12-12T01:48:51.494Z",
+        "name" : "Python",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "postPartitionPythonCode" : "\nfor x in outputmap:\n    DepartmentID_out = x\n    smap = outputmap[x]\n    SalaryIndex_out = smap[\"SalaryIndex\"]\n    EmployeeName_out = smap[\"EmployeeName\"]\n    DepartmentName_out = smap[\"DepartmentName\"]\n    EmployeeSince_out = smap[\"EmployeeSince\"]\n\n    ## Generate the output row\n    generateRow()\n\n# Enter the Python code to run after processing all input rows in a partition here.\n# For example,\n#\n# for x in outputmap:\n#    DepartmentID_out = x\n#    smap = outputmap[x]\n#    SalaryIndex_out = smap[\"SalaryIndex\"]\n#    EmployeeName_out = smap[\"EmployeeName\"]\n#    DepartmentName_out = smap[\"DepartmentName\"]\n#    EmployeeSince_out = smap[\"EmployeeSince\"]\n#\n#    ## Generate the output row\n#    generateRow()\n",
+        "prePartitionPythonCode" : "import time\n\nprint(\"Before the sleep statement\")\ntime.sleep(300)\nprint(\"After the sleep statement\")\n\nprint(\"Using partitions to find the employee with the highest salary\")\noutputmap = {}\n\n\n\n# TODO: Import Python libraries, declare and initialize variables, and define helper methods here.\n# For example,\n\n# print(\"Using partitions to find the employee with the highest salary\")\n# outputmap = {}\n",
+        "pythonCode" : "\nDepartmentID_out = DepartmentID\nprint(\"Processing rows for department ID \" + str(DepartmentID_out))\n\noutputmap.setdefault(DepartmentID, None)\nupdateMax = False\n\nif outputmap.get(DepartmentID, None) is None:\n    updateMax = True\nelse:\n    max_salary = outputmap[DepartmentID]['SalaryIndex']\n    if max_salary is None:\n        updateMax = True\n    if SalaryIndex > max_salary:\n        updateMax = True\n\nif updateMax == True:\n    employee_data = {'SalaryIndex':SalaryIndex,'EmployeeName':EmployeeName,\n                     'EmployeeSince':EmployeeSince,'DepartmentName':DepartmentName}\n\n    outputmap[DepartmentID] = employee_data\n\n# Enter the Python code to run for each input row in a partition here.\n# For example,\n#\n# DepartmentID_out = DepartmentID\n# print(\"Processing rows for department ID \" + str(DepartmentID_out))\n#\n# outputmap.setdefault(DepartmentID, None)\n# updateMax = False\n#\n# if outputmap.get(DepartmentID, None) is None:\n#    updateMax = True\n# else:\n#    max_salary = outputmap[DepartmentID]['SalaryIndex']\n#    if max_salary is None:\n#        updateMax = True\n#    if SalaryIndex > max_salary:\n#        updateMax = True\n#\n# if updateMax == True:\n#    employee_data = {'SalaryIndex':SalaryIndex,'EmployeeName':EmployeeName,\n#                    'EmployeeSince':EmployeeSince,'DepartmentName':DepartmentName}\n#\n#    outputmap[DepartmentID] = employee_data\n",
+        "outputFields" : [
+          {
+            "name" : "DepartmentName_out",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "name" : "DepartmentID_out",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "name" : "EmployeeName_out",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "name" : "SalaryIndex_out",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "name" : "EmployeeSince_out",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          }
+        ],
+        "partitionKeys" : {
+          "fields" : [
+            {
+              "fieldName" : "DepartmentID"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-05-22 19:07:43 PDT"
+}

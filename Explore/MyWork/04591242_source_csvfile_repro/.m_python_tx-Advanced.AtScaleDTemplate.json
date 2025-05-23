@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "3JPGUpCamAefAFCPMBvhC3",
+    "id" : "345KxuUZRaXc7GitpWUmUq",
     "name" : "m_python_tx-Advanced",
     "type" : "AtScaleDTemplate",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CL0N1700000000005I"
+        "repoHandle" : "01CYMC17000000000002"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,10 +23,10 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-08-09T18:27:43.249Z",
+  "updateTime" : "2025-05-23T02:07:43.629Z",
   "objectRefs" : [ {
-    "id" : "2LZLb8FulVSfKbY1nP6nqJ",
-    "name" : "PK_FF_localcluster",
+    "id" : "3voULJyd4NOenOLD0ILYUj",
+    "name" : "cnx_dummy",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,7 +34,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CL0N0B00000000000N"
+        "repoHandle" : "01CYMC0B000000000002"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -44,5 +44,7 @@
       }
     },
     "path" : "/SYS"
-  } ]
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
 }

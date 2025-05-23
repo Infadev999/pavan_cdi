@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "0jLLdH9Di6Xiyo9yUzP4oI",
+    "id" : "jZO0LA6bUSkfKCjdSMZkQW",
     "name" : "04591242_source_csvfile_repro",
     "type" : "Folder",
     "metadata" : {
@@ -18,6 +18,8 @@
     }
   },
   "dataFileExtension" : "json",
-  "updateTime" : "2024-08-09T18:27:43.249Z",
-  "objectRefs" : [ ]
+  "updateTime" : "2025-05-23T02:07:43.629Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
 }
