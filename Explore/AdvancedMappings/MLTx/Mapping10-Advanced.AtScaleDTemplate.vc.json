@@ -1,0 +1,185 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "AT_SCALE_MAPPING",
+    "name" : "Mapping10-Advanced",
+    "links" : [
+      {
+        "link" : "MachineLearning -> Target"
+      },
+      {
+        "link" : "Source -> MachineLearning"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2024-03-19T18:42:12.833Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "_"
+            },
+            "name" : "_",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@3dOJ9nIoCmLbG0CBuc3nsD",
+          "connectionName" : "localfiles",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ml.json",
+            "label" : "ml.json",
+            "objectName" : "ml.json",
+            "path" : "ml.json",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "_",
+                "fieldType" : "CONNECTOR",
+                "label" : "{",
+                "nativeName" : "{",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ml.json"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-03-19T18:42:12.833Z",
+        "name" : "Target",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "useDynamicFileName" : "false",
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-03-19T18:44:46.364Z",
+        "name" : "MachineLearning",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fieldMappingMode" : "MANUAL",
+        "mode" : "REST",
+        "adapter" : {
+          "apiCollectionId" : "@3rKxGcLpA65cxgbxQ9FDCK",
+          "apiCollectionName" : "API Collection_mltxdemo",
+          "apiDefinitionId" : "@3rKxGcLpA65cxgbxQ9FDCK@diabetes",
+          "connectionId" : "saas:@cS9eS9bhouOhx9OZHss7mf",
+          "connectionName" : "ml_restv3",
+          "requestSchema" : "ATLMDL_v2.1_ML Tue Mar 19 18:40:36 UTC 2024|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",
+          "responseSchema" : "ATLMDL_v2.1_ML Tue Mar 19 18:40:36 UTC 2024|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"
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-05-23 15:03:03 EDT"
+}
