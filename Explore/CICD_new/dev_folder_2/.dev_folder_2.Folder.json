@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "erLvB4bGKMKdwzFYXMyUyF",
-    "name" : "dev_folder_1",
+    "name" : "dev_folder_2",
     "type" : "Folder",
     "metadata" : {
       "modelVersion" : {
@@ -18,7 +18,7 @@
     }
   },
   "dataFileExtension" : "json",
-  "updateTime" : "2025-08-28T20:52:30.446Z",
+  "updateTime" : "2025-08-28T20:57:00.853Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-08-28T20:52:30.445Z",
+  "updateTime" : "2025-08-28T20:57:00.852Z",
   "objectRefs" : [ {
     "id" : "1I0ikwKZIjSg8AQHSsbm49",
     "name" : "pavan-cdie",
@@ -86,7 +86,7 @@
         "documentState" : "VALID"
       }
     },
-    "path" : "/Explore/CICD_new/dev_folder_1"
+    "path" : "/Explore/CICD_new/dev_folder_2"
   }, {
     "id" : "bb8q8hS18iLeP5fjFNTBYY",
     "name" : "conn_s3_kirby_landing",
