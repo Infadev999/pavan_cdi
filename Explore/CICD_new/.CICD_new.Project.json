@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "kquoQRkrU0agMNuhK8LuKY",
-    "name" : "CICD",
+    "name" : "CICD_new",
     "type" : "Project",
     "metadata" : {
       "modelVersion" : {
@@ -18,7 +18,7 @@
     }
   },
   "dataFileExtension" : "json",
-  "updateTime" : "2025-08-28T05:01:51.199Z",
+  "updateTime" : "2025-08-28T05:24:54.378Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false
