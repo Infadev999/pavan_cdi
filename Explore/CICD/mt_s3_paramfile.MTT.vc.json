@@ -54,13 +54,13 @@
       "retainFieldMetadata" : false,
       "useExactSrcNames" : false,
       "userUpdated" : true,
-      "unspecified" : false,
       "runtimeParameterData" : {
         "connectionParameterName" : "param",
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
       "restmodernSource" : true,
+      "unspecified" : false,
       "fileList" : false
     },
     {
@@ -101,13 +101,13 @@
       "objectLabel" : "infagcs/pavan%2F/addresses.csv",
       "useExactSrcNames" : false,
       "userUpdated" : true,
-      "unspecified" : false,
       "targetSchemaMode" : "DONT_APPLY_CHANGES",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
       "restmodernSource" : true,
+      "unspecified" : false,
       "fileList" : false
     }
   ],
@@ -141,6 +141,7 @@
   "connectionName" : "S3 V2",
   "optimizationPlan" : "NONE",
   "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-05-22 21:34:24 EDT"
+  "vcsExportTime" : "2025-08-28 01:01:50 EDT"
 }
