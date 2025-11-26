@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "3JPGUpCamAefAFCPMBvhC3",
-    "name" : "m_python_tx-Advanced",
+    "name" : "m_python_tx-Advanced1",
     "type" : "AtScaleDTemplate",
     "metadata" : {
       "modelVersion" : {
@@ -16,14 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "new logic",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-26T16:46:38.388Z",
+  "updateTime" : "2025-11-26T16:52:12.252Z",
   "objectRefs" : [ {
     "id" : "2LZLb8FulVSfKbY1nP6nqJ",
     "name" : "PK_FF_localcluster",

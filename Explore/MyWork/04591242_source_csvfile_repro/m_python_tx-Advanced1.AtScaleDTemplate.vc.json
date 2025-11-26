@@ -1,9 +1,10 @@
 {
   "content" : {
+    "description" : "new logic",
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "AT_SCALE_MAPPING",
-    "name" : "m_python_tx-Advanced",
+    "name" : "m_python_tx-Advanced1",
     "specialCharacterSupport" : "false",
     "links" : [
       {
@@ -581,5 +582,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-11-26 11:46:38 EST"
+  "vcsExportTime" : "2025-11-26 11:52:12 EST"
 }
